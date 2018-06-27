@@ -1,0 +1,27 @@
+
+.container{
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+input{
+    size: 25ch;
+}
+
+table{
+    margin: 10px 0px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr{
+    text-align: left;
+    /*border: 1px solid #000000;*/
+}
+
+td{
+    padding: 5px 2px;
+    /*border: 1px solid #000000;*/
+}
+

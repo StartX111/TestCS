@@ -1,0 +1,14 @@
+
+.container{
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+input{
+    size: 25ch;
+}
+
+.outputData{
+    padding: 15px 0px;
+}
