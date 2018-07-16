@@ -12,8 +12,6 @@ class Button{
 
         this.addBtnEl.addEventListener('click', this.createRow.bind(this));
         this.removBtnEl.addEventListener('click', this.deleteRow.bind(this));
-
-
     }
 
     createRow(){

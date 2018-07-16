@@ -7,7 +7,7 @@ class Button{
 
         this.table = new Table({
             el: this.el.querySelector('[data-component="table"]'),
-            numberCow: 3,
+            numberCol: 3,
             strLength: 16
         });
 
