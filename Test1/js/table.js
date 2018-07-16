@@ -19,7 +19,9 @@ class Table{
 
     dellRow(){
         let row = this.el.querySelectorAll("tr");
-        this.el.removeChild(row[row.length-1]);
+        if(row.length){
+            this.el.removeChild(row[row.length-1]);
+        }
     }
 
 
