@@ -12,3 +12,15 @@ input{
 .outputData{
     padding: 15px 0px;
 }
+
+h3{
+    text-align: center;
+}
+
+p{
+    padding: 10px 0px;
+}
+
+img{
+    border: 2px solid red;
+}

@@ -9,12 +9,29 @@
 </head>
 
 <body>
+    <header class="container">
+        <div>
+            <h3>Задание №1</h3>
+            <p>Используя HTML, CSS и JavaScript сделать страницу с произвольной таблицей и двумя
+                кнопками: Add и Remove.</p>
+            <p>Таблица может иметь произвольное количество колонок.</p>
+            <p>Нажатие кнопки Add должно добавлять в конец таблицы новую строку ячеек, заполненных
+                случайным текстом.</p>
+            <p>Нажатие кнопки Remove должно удалять из таблицы последнюю строку.</p>
+            <p>Пример интерфейса:</p>
+        </div>
+        <div>
+            <img src="img/exapmle.jpg">
+        </div>
+    </header>
 
     <div class="container" data-component="app">
         <button data-component="addRowToTable">Add</button>
         <button data-component="removeLastRow">Remove</button>
         <table data-component="table"></table>
     </div>
+
+    <footer></footer>
 
 <script src="js/table.js"></script>
 <script src="js/button.js"></script>
