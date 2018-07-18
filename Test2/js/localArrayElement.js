@@ -1,1 +1,0 @@
-var localArrayElement = new Array();
