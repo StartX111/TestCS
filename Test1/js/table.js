@@ -10,7 +10,7 @@ class Table{
         let row = document.createElement("tr");
         for(let i=0; i < this.numberCol; i++){
             let cell = document.createElement("td");
-            let cellText = document.createTextNode(this._getStrRand(this.strLength));
+            let cellText = document.createTextNode(this._getStrRandom(this.strLength));
             cell.appendChild(cellText);
             row.appendChild(cell);
         }
@@ -25,7 +25,7 @@ class Table{
     }
 
 
-    _getStrRand(strLength){
+    _getStrRandom(strLength){
         let result = "";
         let words = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
         let wordMaxPositions = words.length - 1;

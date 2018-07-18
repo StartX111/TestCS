@@ -6,7 +6,7 @@ class Button{
         this.removBtnEl = this.el.querySelector('[data-component="removeSelectRow"]');
 
         this.table = new Table({
-            tableNew: this.el.querySelector('[data-component="table"]'),
+            elementTable: this.el.querySelector('[data-component="table"]'),
             textInput: this.el.querySelector('[data-component="inputStr"]')
         });
 
@@ -17,7 +17,6 @@ class Button{
     createRow(){
         this.table.addRow();
     }
-
 
     deleteRow(){
         this.table.dellRow();

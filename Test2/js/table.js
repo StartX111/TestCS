@@ -1,52 +1,34 @@
 class Table{
 
     constructor(options){
-        this.tableNew = options.tableNew;
+        this.elementTable = options.elementTable;
         this.textInput = options.textInput;
-        this.arrayElement = [];
     }
 
     addRow(){
-        if (this.textInput.value){
-            let text = document.createTextNode(this.textInput.value);
+        if (this.textInput){
+            let template = `
+            <tr>
+                <td>${this.textInput.value}</td>
+                <td>
+                    <input type="checkbox">
+                </td>
+            </tr>`;
+            this.elementTable.innerHTML += template;
             this.textInput.value = '';
-            let check = document.createElement("input");
-            check.type = "checkbox";
-            this.arrayElement.push({
-                textS: text,
-                checkedS: check
-            });
-            this.renderTable();
         }
     }
 
 
     dellRow(){
-        for(let i = 0 ; i < this.arrayElement.length; i++){
-            if (this.arrayElement[i].checkedS.checked){
-                this.arrayElement.splice(i, 1);
+        let getElements = this.elementTable.querySelectorAll('[type="checkbox"]');
+        for(let count = 0 ; count < getElements.length; count++){
+            if (getElements[count].checked){
+                getElements[count].parentNode.parentElement.remove();
             }
         }
-        this.renderTable();
     }
 
 
-    renderTable(){
-        let oldRow = this.tableNew.querySelectorAll("tr");
-        for (let i = 0; i < oldRow.length; i++) {
-            this.tableNew.removeChild(oldRow[i]);
-        }
-
-        for(let i = 0; i < this.arrayElement.length; i++){
-            let row = document.createElement("tr");
-            let cell = document.createElement("td");
-            cell.appendChild(this.arrayElement[i].textS);
-            row.appendChild(cell);
-            let cell1 = document.createElement("td");
-            cell1.appendChild(this.arrayElement[i].checkedS);
-            row.appendChild(cell1);
-            this.tableNew.appendChild(row);
-        }
-    }
 
 }

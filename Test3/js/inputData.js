@@ -18,13 +18,7 @@ class InputData{
             this.nowDate = new Date(+dateOrYear[2], dateOrYear[0]-1, +dateOrYear[1], +hourOrMinutes[0], +hourOrMinutes[1]);
             let nameMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
             let result = "";
-            let minutes;
-            if (this.nowDate.getMinutes() < 10){
-                minutes = '0' + this.nowDate.getMinutes();
-            } else {
-                minutes = this.nowDate.getMinutes();
-            }
-            result += this.nowDate.getHours() + '-' + minutes + ' ' + this.nowDate.getDate() + ' ' +
+            result += this.nowDate.getHours() + '-' + (this.nowDate.getMinutes()<10?'0'+this.nowDate.getMinutes():this.nowDate.getMinutes()) + ' ' + this.nowDate.getDate() + ' ' +
                 nameMonth[this.nowDate.getMonth()] + ' ' + this.nowDate.getFullYear();
 
             let text = document.createTextNode(result);
